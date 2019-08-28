@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* grid css */
+.grid {
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+}
+
+.item {
+  margin: 3px;
+}
+
+.grid-columns {
+	grid-template-columns: repeat(1,1fr);
+}
+
+.backicon {
+  max-width:  6%;
+  grid-area: backicon;
+}
+
+.title {
+  grid-area: title;
+}
+
+.grid-area {
+  grid-template-areas:
+		"backicon title title";
+}
+
+/* menu topo */
+.topomenu {
+  background-color: #859fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 8px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Design responsivo */
+@media all and (min-width: 348px) {
+  .grid {
+    max-width: 410px;
+    margin: 0 auto;
+    display: grid;
+  }
+
+  .item {
+    margin: 2px;
+  }
+
+  .grid-columns {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media all and (min-width: 409px) {
+  .grid {
+    max-width: 470px;
+    margin: 0 auto;
+    display: grid;
+  }
+
+  .grid-columns {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+}
+
+@media all and (min-width: 500px) {
+  .grid-columns {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+}
